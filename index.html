@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Flashcards</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 40px;
+    }
+
+    .card {
+      width: 250px;
+      height: 350px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .card-front {
+      background-color: white;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card-back {
+      background-color: #4b7bec;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CARD 1 -->
+  <div class="card">
+    <div class="card-inner">
+
+      <div class="card-front">
+        <img src="https://via.placeholder.com/250x180" alt="Imagem do card 1">
+        <h2>Flashcard 1</h2>
+        <p>O que é este conceito?</p>
+      </div>
+
+      <div class="card-back">
+        <h2>Resposta</h2>
+        <p>Esta é a resposta do primeiro flashcard.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CARD 2 -->
+  <div class="card">
+    <div class="card-inner">
+
+      <div class="card-front">
+        <img src="https://via.placeholder.com/250x180" alt="Imagem do card 2">
+        <h2>Flashcard 2</h2>
+        <p>Qual é a definição deste conceito?</p>
+      </div>
+
+      <div class="card-back">
+        <h2>Resposta</h2>
+        <p>Esta é a resposta do segundo flashcard.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CARD 3 -->
+  <div class="card">
+    <div class="card-inner">
+
+      <div class="card-front">
+        <img src="https://via.placeholder.com/250x180" alt="Imagem do card 3">
+        <h2>Flashcard 3</h2>
+        <p>Como funciona este conceito?</p>
+      </div>
+
+      <div class="card-back">
+        <h2>Resposta</h2>
+        <p>Esta é a resposta do terceiro flashcard.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
